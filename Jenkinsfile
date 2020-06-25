@@ -1,10 +1,9 @@
 pipeline {
    	           	         agent any
-			tools {
+			tools{
      				  sh maven 'Maven 3.6.3'
-        				  
-	                                         }
-                                                stages{
+			       }
+                                       stages{
 		                       stage('Checkout external proj') {
         		                           steps {
                                                                        git branch: '*/master',
@@ -12,9 +11,9 @@ pipeline {
                                                                        url: 'ssh://git@github.com:aravindchakilam/JaiVinayaka.git'				
                                                                    }
                                                                   }
-                                                        stage('compile'){
+                                   stage('compile'){
 			          steps {
-               		                	     sh 'mvn compile'
+               		                  sh 'mvn compile'
             
        			                    }
                                                             }
