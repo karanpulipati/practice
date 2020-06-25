@@ -1,7 +1,7 @@
 pipeline {
    	           	         agent any
 			tools{
-     				  sh maven 'Maven 3.6.3'
+     			       maven 'Maven 3.6.3'
 			       }
                                        stages{
 		                       stage('Checkout external proj') {
